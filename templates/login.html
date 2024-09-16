@@ -1,0 +1,35 @@
+{% include "navbar.html" %} 
+
+{% block content %}
+    <div class="container-fluid" style="margin-top:90px;">  
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mb-3"><b>Login Page</b></h4>
+                <hr style="border-color:#b8bfc2;">
+                {% include "message.html" %}
+            </div>
+        </div>
+        <section class="py-4 my-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="mb-4">
+                                <label fro=""  class="form-label" >Username</label>
+                                <input type="text" class="form-control" placeholder="" name="username">
+                            </div>
+                            <div class="mb-4">
+                                <label fro=""  class="form-label" >Password</label>
+                                <input type="password" class="form-control" placeholder="" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}
+{% include 'footer.html' %}

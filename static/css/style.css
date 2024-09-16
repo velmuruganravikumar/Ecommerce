@@ -1,0 +1,57 @@
+.carousel-item img{
+    object-fit: cover;
+    object-position: top;
+    height:80vh;
+    overflow:hidden;
+   
+   
+}
+a {
+    text-decoration: none;
+}
+body{
+    font-family:'noto sans',sans-serif;
+}
+
+.old-price{
+    font-weight: bold;
+    color:red;
+
+}
+
+.new-price{
+    font-weight: bold;
+    background-color: green;
+    color:white;
+    padding:3px;
+    border-radius: 2px;
+}
+
+.pic-box{
+     position:relative;
+}
+.hot{
+    position:absolute;
+    color:white;
+    background-color:orangered;
+    font-weight: bold;
+    display: inline;
+    border-radius: 5px;
+    padding:5px;
+    top:0;
+    text-align: center;
+    width:50px;
+    float:right;
+    z-index: 10;
+
+}
+.home{
+    width:80vw;
+}
+/* #cart_tbl{
+    
+    
+} */
+
+
+

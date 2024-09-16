@@ -1,0 +1,47 @@
+{% include "navbar.html" %} 
+
+{% block content %}
+
+    <section class="bg-light" style="margin-top:100px;">
+        <div class="container">
+            <div class="row">
+                <h4 class="mb-3">Favourite Items</h4>
+                <hr style="border-color:#b8bfc2;">
+                {% include "message.html" %}
+            </div>
+           <div class="row">
+            <table class="">
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Unit Price</th>
+                    <th>Remove</th>
+                </tr>
+                <tbody>
+                {% for item in fav %}
+                    <tr>
+                        <td><img src="{{item.product.product_image.url}}" height="75px" alt="{{item.product.name}}"></td>
+                        <td>{{item.product.name}}</td>
+                        <td>{{item.product.selling_price | stringformat:'d'}}</td>
+                        <td><a  href="{% url 'remove_fav' item.id %}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Remove</a></td>
+                      
+                    </tr>
+                {% endfor %}
+                </tbody>
+               
+
+                
+            </table>
+            
+            </div>
+           
+        </div>
+    </section>
+
+   
+<div id="footer" style="margin-top:200px;">
+   {% include 'footer.html' %}
+</div>
+
+
+{% endblock %}
